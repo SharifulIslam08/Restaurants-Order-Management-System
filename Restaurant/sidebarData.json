@@ -1,0 +1,68 @@
+[
+  {
+    "sidebar_item_id": 1,
+    "sidebar_item_name": "HOME",
+    "sidebar_item_parent_id": 1,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 2,
+    "sidebar_item_name": "MENUS",
+    "sidebar_item_parent_id": 2,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 3,
+    "sidebar_item_name": "BREAKFAST",
+    "sidebar_item_parent_id": 2,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 4,
+    "sidebar_item_name": "WEEKDAY LUNCH",
+    "sidebar_item_parent_id": 2,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 5,
+    "sidebar_item_name": "DINNER",
+    "sidebar_item_parent_id": 2,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 6,
+    "sidebar_item_name": "SNAKS",
+    "sidebar_item_parent_id": 2,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 7,
+    "sidebar_item_name": "DRINKS",
+    "sidebar_item_parent_id": 2,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 8,
+    "sidebar_item_name": "ABOUT US",
+    "sidebar_item_parent_id": 8,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 9,
+    "sidebar_item_name": "OUR CHEFS",
+    "sidebar_item_parent_id": 9,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 10,
+    "sidebar_item_name": "PAGES",
+    "sidebar_item_parent_id": 10,
+    "sidebar_item_destination": ""
+  },
+  {
+    "sidebar_item_id": 11,
+    "sidebar_item_name": "CONTACT",
+    "sidebar_item_parent_id": 11,
+    "sidebar_item_destination": ""
+  }
+]

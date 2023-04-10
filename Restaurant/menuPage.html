@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Page</title>
+    <!-- ===== Fontawesome CDN ======= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- ===== Stylesheet ====== -->
+    <link rel="stylesheet" href="/css/bootstrap-copy.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <!-- <link rel="stylesheet" href="/css/homePage.css" /> -->
+    <link rel="stylesheet" href="/css/menuPage.css" />
+</head>
+
+<body>
+    <div id="body_container">
+        <!-- =========== HEADER ============= -->
+        <div class="d-flex justify-content-center bg-white" id="header_container">
+            <div class="navbar__toggle ms-3 me-4 mt-4" id="sidebar-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- ========= LOGO ======== -->
+            <div class="logo d-flex">
+                <div class="logo_img">
+                    <img src="/images/logo 1.jpg" class="rounded-3" alt="" />
+                </div>
+                <div class="logo_text mt-3 text-start">
+                    <h2 class="logo_text-Delicious">DEMO</h2>
+                    <span class="logo_text-restaurent fs-5">Restaurant</span>
+                </div>
+            </div>
+            <div class="show_order-header_btn" id="show_order">
+                <i class="fa-solid fa-bowl-rice"></i>
+            </div>
+
+            <div id="orders_container">
+                <div class="cart_header p-2 text-center" style="background: var(--color-light);">
+                    <h3>Track Order</h3>
+                </div>
+                <div class="sidebar_delimiter"></div>
+                <div class="ordered_items">
+                    <img class="empty_order_img" src="/images/emptyCart.4e943399.png" alt="">
+
+
+                </div>
+                <!-- end of ordered items -->
+            </div>
+            <div class="add_to_cart-header_btn" id="nav_cart">
+                <span class="added_items-count">0</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <!-- add to cart -->
+            <!-- <div class="cart-outbox"></div> -->
+            <div id="cart_container">
+                <div class="cart_header p-2 text-center" style="background: var(--color-light);">
+                    <h3>ADDED ITEMS</h3>
+                </div>
+                <div class="sidebar_delimiter"></div>
+                <div class="cart_items">
+                    <img class="empty_order_img" src="/images/emptyCart.4e943399.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- =========== END OF HEADER ============= -->
+
+        <!-- =========== SIDE NAV ============= -->
+        <!-- sideBar outer box -->
+        <div class="sidebar-outbox"></div>
+        <div id="side_nav_container">
+            <div class="sidebar__heading">
+                <span id="sidebar-cross-btn"><i class="fa-regular fa-circle-xmark"></i></span>
+                <div class="sidebar_heading-logo">
+                    <img src="/images/logo 3.jpg" alt="" />
+                </div>
+            </div>
+            <!-- sidebar menu items  -->
+            <div class="sidebar__menu-items">
+            </div>
+            <!-- sidebar footer -->
+            <div class="sidebar_footer text-center">
+                <h1>Visit Us</h1>
+                <p class="text-muted">
+                    Restaurant St, Delicious City, London 9578, UK
+                </p>
+                <p>Open: 9.30 am - 2.30pm</p>
+                <i class="fa-regular fa-square-full" style="
+              color: var(--color-primary);
+              transform: rotate(45deg);
+              font-size: 14px;
+            "></i>
+                <h6 class="mt-2">CALL FOR DETAILS</h6>
+                <h5 style="color: var(--color-primary)">+88-12345-678910</h5>
+            </div>
+        </div>
+        <!-- =========== END OF Side NAV ============= -->
+
+        <!-- ================ CORE =================== -->
+        <div id="core_container" class="mt-3">
+            <div class="text-center fs-2">Delicious Menu List</div>
+            <div class="menu-tabs ">
+                <!-- <div class="p-1"> -->
+                <div class="delimiter-horizontal"></div>
+                <!-- menu headers -->
+                <div class="menu-tabs-header-items m-3">
+                </div>
+                <!-- END OF MENU HEADERS -->
+                <div class="delimiter-horizontal"></div>
+                <!-- Dynamic Dish items -->
+                <div class="p-3 mt-5 ms-5 me-2">
+                    <div class="d-flex justify-content-center ">
+                        <div class="menu_dishes d-flex flex-wrap  rounded-5">
+                            <!--  -->
+                        </div>
+                        <!-- end of sp -->
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center bg- mt-5 mb-5 ">
+                    <!--  -->
+                </div>
+
+                <!-- ======================== Order Customization =================== -->
+
+                <div class="customize-order">
+                    <div class="order-card">
+                        <h5>ADDONS</h5>
+                        <div class="addon_list d-flex justify-content-center">
+                        </div>
+                    </div>
+                </div>
+                <!-- =========== order confirmation ========= -->
+                <div class="confirm-order-outerbox">
+                    <div class="order-confirm">
+                        <h4>Thanks for being with Us!</h4>
+                        <p>Your order will be served withing <span
+                                style="color:var(--color-primary);font-size: 16px;font-weight: 500;">30 minutes</span>.
+                        </p>
+                        <button class="btn btn-outline-success w-50" id="order_ok-btn">OK</button>
+                    </div>
+                </div>
+                <!-- ------------------ End of theme ---------- -->
+                <!-- ================ END OF CORE =================== -->
+                <!-- <div id="footer_container" class="text-center">footer</div> -->
+            </div>
+        </div>
+
+        <!-- ========= Scripts =========== -->
+        <script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+        <!-- <script src="/js/homePage.js"></script> -->
+        <script src="/js/menuPage.js"></script>
+</body>
+</html>

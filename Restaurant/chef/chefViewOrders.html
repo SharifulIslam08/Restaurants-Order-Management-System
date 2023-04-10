@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef Order Page</title>
+    <!-- ===== Fontawesome CDN ======= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- ===== Stylesheet ====== -->
+    <link rel="stylesheet" href="/css/bootstrap-copy.css" />
+    <!-- <link rel="stylesheet" href="/css/base.css" /> -->
+    <link rel="stylesheet" href="/chef/chefViewOrders.css" />
+    <!-- chart.js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div id="body_container" class="m-0 p-0">
+      <!-- <div id="header_container" class="text-center d-flex">
+        <div class="logo">Delici Restaurant</div>
+        <div class="input-group m-2">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Button
+          </button>
+        </div>
+        <div>
+          <img
+            style="height: 40xp; width: 40px"
+            class="m-2 ms-4"
+            src="/images/user_icon_1.png"
+            alt=""
+          />
+        </div>
+      </div> -->
+      <div id="side_nav_container" class="text-center">
+        <section id="side_nav">
+          <div class="mb-4 mt-4">
+            <h5>Demo Restaurant</h5>
+          </div>
+          <div class="">
+            <img
+              style="
+                height: 80px;
+                width: 80px;
+                border: 1px solid #535458;
+                border-radius: 50px;
+              "
+              src="/images/user_icon_1.png"
+              alt=""
+            />
+            <div class="">
+              <h6>Md. Shariful Islam</h6>
+              <p>Admin</p>
+            </div>
+          </div>
+          <div class="m-3" style="height: 1.2px; background: #c1c3cd"></div>
+          <div class="text-start p-3" style="font-size: 22px">
+            <p id="home" onclick="active(1)" class="Button p-4 active">
+              <i class="fa-solid fa-house me-4"></i>Home
+            </p>
+            <p id="food_ready" onclick="active(3)" class="Button p-4">
+              <i class="fa-sharp fa-solid fa-cart-plus me-4"></i>Food Ready 
+            </p>
+            <p id="Order_History" onclick="active(2)" class="Button p-4">
+              <i class="fa-solid fa-clock-rotate-left me-4"></i>Order Completed
+            </p>
+            <p id="Messages" onclick="active(4)" class="Button p-4">
+              <i class="fa-regular fa-envelope me-4"></i>Messages
+            </p>
+          </div>
+        </section>
+      </div>
+      <div id="core_container_home" class="">
+        <section id="order_lists">
+          <div>
+            <h1 class="ms-5 mt-4 rounded-3 ps-4 mb-2">Conformed Order List</h1>
+            <!-- <div
+              id="first_row_Cards_In_home"
+              class="d-flex justify-content-around text-center mb-4"
+            > -->
+            <div id="parentOrder" class="d-flex flex-wrap justify-content-start">
+              <!-- <div id="order_list_one" class="p-3 m-3 bg-white rounded-3">
+                  <div class="d-flex justify-content-between">
+                    <div class="text-start m-2">
+                      <h5>Order #TN-<label id="tn">0</label></h5>
+                      <p>23 feb 2023, 08.12 PM</p>
+                    </div>
+                    <img
+                      class="profile_photo"
+                      src="/images/user_icon_1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div id="overflow" class="">
+                    <div class="d-flex justify-content-around mb-4">
+                      <img
+                        class="foodItem_photo me-5"
+                        src="/images/dish_1.png"
+                        alt=""
+                      />
+                      <div>
+                        <h5>Vegetable Mixups</h5>
+                        <p>Vegetable Fritters with Egg</p>
+                        <div class="d-flex justify-content-around">
+                          <h5>$5.30</h5>
+                          <h5>Qty: 1</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-4">
+                      <img
+                        class="foodItem_photo me-5"
+                        src="/images/dish_1.png"
+                        alt=""
+                      />
+                      <div>
+                        <h5>Vegetable Mixups</h5>
+                        <p>Vegetable Fritters with Egg</p>
+                        <div class="d-flex justify-content-around">
+                          <h5>$5.30</h5>
+                          <h5>Qty: 1</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-around mb-4">
+                      <img
+                        class="foodItem_photo me-5"
+                        src="/images/dish_1.png"
+                        alt=""
+                      />
+                      <div>
+                        <h5>Vegetable Mixups</h5>
+                        <p>Vegetable Fritters with Egg</p>
+                        <div class="d-flex justify-content-around">
+                          <h5>$5.30</h5>
+                          <h5>Qty:1</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="m-3"
+                    style="height: 1.2px; background: #c1c3cd"
+                  ></div>
+                  <div class="d-flex justify-content-between">
+                    <div class="text-start">
+                      <p style="font-size: larger">2 Items</p>
+                      <h3>$10.30</h3>
+                    </div>
+                    <div class="text-center pt-3">
+                      <p
+                        id="reject"
+                        onclick="orderselectionone(0)"
+                        class="btn btn-outline-danger"
+                      >
+                        <i
+                          style="font-size: 40px; width: 42px"
+                          class="fa-solid fa-xmark"
+                        ></i>
+                      </p>
+                      <p
+                        id="conform"
+                        onclick="orderselectionone(1)"
+                        class="btn btn-outline-success"
+                      >
+                        <i
+                          style="font-size: 40px"
+                          class="fa-solid fa-check"
+                        ></i>
+                      </p>
+                    </div>
+                  </div>
+              </div> -->
+              <!-- <div id="order_list_two" class="p-3 m-3 bg-white rounded-3">
+                <div class="d-flex justify-content-between">
+                  <div class="text-start m-2">
+                    <h5>Order #TN-15</h5>
+                    <p>23 feb 2023, 08.12 PM</p>
+                  </div>
+                  <img
+                    class="profile_photo"
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty: 1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty:1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="m-3"
+                  style="height: 1.2px; background: #c1c3cd"
+                ></div>
+                <div class="d-flex justify-content-between">
+                  <div class="text-start">
+                    <p style="font-size: larger">2 Items</p>
+                    <h3>$10.30</h3>
+                  </div>
+                  <div class="text-center pt-3">
+                    <p
+                      onclick="orderselectiontwo(0)"
+                      class="btn btn-outline-danger"
+                    >
+                      <i
+                        style="font-size: 40px; width: 42px"
+                        class="fa-solid fa-xmark"
+                      ></i>
+                    </p>
+                    <p
+                      onclick="orderselectiontwo(1)"
+                      class="btn btn-outline-success"
+                    >
+                      <i style="font-size: 40px" class="fa-solid fa-check"></i>
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div id="order_list_three" class="p-3 bg-white rounded-3 m-3">
+                <div class="d-flex justify-content-between">
+                  <div class="text-start m-2">
+                    <h5>Order #TN-15</h5>
+                    <p>23 feb 2023, 08.12 PM</p>
+                  </div>
+                  <img
+                    class="profile_photo"
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty: 1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty:1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="m-3"
+                  style="height: 1.2px; background: #c1c3cd"
+                ></div>
+                <div class="d-flex justify-content-between">
+                  <div class="text-start">
+                    <p style="font-size: larger">2 Items</p>
+                    <h3>$10.30</h3>
+                  </div>
+                  <div class="text-center pt-3">
+                    <p class="btn btn-outline-danger">
+                      <i
+                        style="font-size: 40px; width: 42px"
+                        class="fa-solid fa-xmark"
+                      ></i>
+                    </p>
+                    <p class="btn btn-outline-success">
+                      <i style="font-size: 40px" class="fa-solid fa-check"></i>
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div id="order_list_four" class="p-3 bg-white rounded-3 m-3">
+                <div class="d-flex justify-content-between">
+                  <div class="text-start m-2">
+                    <h5>Order #TN-15</h5>
+                    <p>23 feb 2023, 08.12 PM</p>
+                  </div>
+                  <img
+                    class="profile_photo"
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty: 1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty:1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="m-3"
+                  style="height: 1.2px; background: #c1c3cd"
+                ></div>
+                <div class="d-flex justify-content-between">
+                  <div class="text-start">
+                    <p style="font-size: larger">2 Items</p>
+                    <h3>$10.30</h3>
+                  </div>
+                  <div class="text-center pt-3">
+                    <p class="btn btn-outline-danger">
+                      <i
+                        style="font-size: 40px; width: 42px"
+                        class="fa-solid fa-xmark"
+                      ></i>
+                    </p>
+                    <p class="btn btn-outline-success">
+                      <i style="font-size: 40px" class="fa-solid fa-check"></i>
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div id="order_list_five" class="p-3 bg-white rounded-3 m-3">
+                <div class="d-flex justify-content-between">
+                  <div class="text-start m-2">
+                    <h5>Order #TN-15</h5>
+                    <p>23 feb 2023, 08.12 PM</p>
+                  </div>
+                  <img
+                    class="profile_photo"
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty: 1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty:1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="m-3"
+                  style="height: 1.2px; background: #c1c3cd"
+                ></div>
+                <div class="d-flex justify-content-between">
+                  <div class="text-start">
+                    <p style="font-size: larger">2 Items</p>
+                    <h3>$10.30</h3>
+                  </div>
+                  <div class="text-center pt-3">
+                    <p class="btn btn-outline-danger">
+                      <i
+                        style="font-size: 40px; width: 42px"
+                        class="fa-solid fa-xmark"
+                      ></i>
+                    </p>
+                    <p class="btn btn-outline-success">
+                      <i style="font-size: 40px" class="fa-solid fa-check"></i>
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div id="order_list_six" class="m-3 p-3 bg-white rounded-3">
+                <div class="d-flex justify-content-between">
+                  <div class="text-start m-2">
+                    <h5>Order #TN-15</h5>
+                    <p>23 feb 2023, 08.12 PM</p>
+                  </div>
+                  <img
+                    class="profile_photo"
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty: 1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img
+                    class="foodItem_photo me-5"
+                    src="/images/dish_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty:1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="m-3"
+                  style="height: 1.2px; background: #c1c3cd"
+                ></div>
+                <div class="d-flex justify-content-between">
+                  <div class="text-start">
+                    <p style="font-size: larger">2 Items</p>
+                    <h3>$10.30</h3>
+                  </div>
+                  <div class="text-center pt-3">
+                    <p class="btn btn-outline-danger">
+                      <i
+                        style="font-size: 40px; width: 42px"
+                        class="fa-solid fa-xmark"
+                      ></i>
+                    </p>
+                    <p class="btn btn-outline-success">
+                      <i style="font-size: 40px" class="fa-solid fa-check"></i>
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="core_container_food_ready" class=" ">
+        <h1 class="ms-5 mt-4 rounded-3 ps-4 mb-2">Cooking Order List</h1>
+        <div id="order_Ready_parent" class="d-flex flex-wrap justify-content-start">
+        </div>
+      </div>
+      <div id="core_container_Order-History" class="">
+        <h1 class="ms-5 mt-4 rounded-3 ps-4 mb-2">ready Order List</h1>
+        <section id="order_lists">
+          <div>
+            <div
+              id="order_Cards_In_History"
+              class="d-flex flex-wrap justify-content-start"
+            >
+              <!-- <div class=" p-3 bg-white rounded-3">
+                <div class="d-flex justify-content-between">
+                  <div class="text-start m-2">
+                    <h5>Order #TN-15</h5>
+                    <p>23 feb 2023, 08.12 PM</p>
+                  </div>
+                  <img class="profile_photo" src="/images/user_icon_1.png" alt="">
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img class="foodItem_photo me-5" src="/images/dish_1.png" alt="">
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty: 1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mb-4">
+                  <img class="foodItem_photo me-5" src="/images/dish_1.png" alt="">
+                  <div>
+                    <h5>Vegetable Mixups</h5>
+                    <p>Vegetable Fritters with Egg</p>
+                    <div class="d-flex justify-content-around">
+                      <h5>$5.30</h5>
+                      <h5>Qty:1</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-3" style=" height: 1.2px;background: #C1C3CD;"></div>
+                <div class="d-flex justify-content-between">
+                  <div class="text-start">
+                    <p style="font-size: larger;">2 Items</p>
+                    <h3>$10.30</h3>
+                  </div>
+                  <div class="text-center pt-3">
+                    <p class="btn btn-outline-danger"><i style="font-size: 40px;" class="fa-solid fa-xmark"></i></p>
+                    <p class="btn btn-outline-success"><i style="font-size: 40px;" class="fa-solid fa-check"></i></p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- working -->
+      <!--  -->
+      <div id="core_container_Messages" class="">
+        <div class="row ms-3 mt-3">
+          <div
+            class="rounded-3 col-3 me-4 p-4"
+            style="background-color: var(--card-color)"
+          >
+            <div class="d-flex justify-content-between mt-4">
+              <div class="d-flex justify-content-center">
+                <img
+                  style="height: 50px; width: 45px"
+                  src="/images/user_icon_1.png"
+                  alt=""
+                />
+                <div class="ms-3">
+                  <h5>Md. Shariful Islam</h5>
+                  <p>Admin</p>
+                </div>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <div class="m-3" style="height: 1.2px; background: #c1c3cd"></div>
+            <div id="search" class="ps-3 align-items-center">
+              <input
+                class="p-3"
+                style="
+                  width: 92%;
+                  height: 45px;
+                  border-radius: 5px;
+                  border: 1px solid #babcc4;
+                "
+                type="text"
+                placeholder="Search..."
+              />
+              <i
+                style="position: relative; right: 30px"
+                class="fa-solid fa-magnifying-glass"
+              ></i>
+            </div>
+            <div class="m-3" style="height: 1.2px; background: #c1c3cd"></div>
+            <div id="user_message" class="">
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 50px;
+                      border: 4px solid rgb(36, 194, 76);
+                      border-radius: 60px;
+                    "
+                    src="/images/profile1.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Margaret Bent</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>5 min ago</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 45px;
+                      border: 1px solid #535458;
+                      border-radius: 35px;
+                    "
+                    src="/images/profile2.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Marget Clayton</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>Active</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 45px;
+                      border: 1px solid #535458;
+                      border-radius: 35px;
+                    "
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Margaret Bent</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>5 min ago</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 45px;
+                      border: 1px solid #535458;
+                      border-radius: 35px;
+                    "
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Margaret Bent</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>5 min ago</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 45px;
+                      border: 1px solid #535458;
+                      border-radius: 35px;
+                    "
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Margaret Bent</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>5 min ago</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 45px;
+                      border: 1px solid #535458;
+                      border-radius: 35px;
+                    "
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Margaret Bent</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>5 min ago</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 45px;
+                      border: 1px solid #535458;
+                      border-radius: 35px;
+                    "
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Margaret Bent</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>5 min ago</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex justify-content-center">
+                  <img
+                    class="mt-1 me-2"
+                    style="
+                      height: 50px;
+                      width: 45px;
+                      border: 1px solid #535458;
+                      border-radius: 35px;
+                    "
+                    src="/images/user_icon_1.png"
+                    alt=""
+                  />
+                  <div>
+                    <h5>Margaret Bent</h5>
+                    <p>Hey! there i'm ...</p>
+                  </div>
+                </div>
+                <div>
+                  <p>5 min ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="height: fit-content" class="rounded-3 col-8 bg-light">
+            <div class="d-flex justify-content-between mt-4">
+              <div class="d-flex justify-content-center">
+                <div class="ms-3">
+                  <h5>Md. Shariful Islam</h5>
+                  <p>Active</p>
+                </div>
+              </div>
+              <i class="fa-solid fa-ellipsis-vertical me-4"></i>
+            </div>
+            <div class="m-3" style="height: 1.2px; background: #c1c3cd"></div>
+            <p class="text-center">Today</p>
+            <div id="single_person_chat_box" class="h-75">
+              <div class="d-flex justify-content-start">
+                <img
+                  class="mt-1 me-2"
+                  style="
+                    height: 50px;
+                    width: 45px;
+                    border: 1px solid #535458;
+                    border-radius: 35px;
+                  "
+                  src="/images/profile2.webp"
+                  alt=""
+                />
+                <div>
+                  <div id="message_box" class="p-2">
+                    <h6>Marget Clayton</h6>
+                    <p>Hello! How are you?</p>
+                  </div>
+                  <p>10.00</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div>
+                  <div id="message_box" class="p-2">
+                    <h6>Marget Clayton</h6>
+                    <p>Hello!</p>
+                  </div>
+                  <p>10.00</p>
+                </div>
+                <img
+                  class="mt-1 ms-2"
+                  style="
+                    height: 50px;
+                    width: 45px;
+                    border: 1px solid #535458;
+                    border-radius: 35px;
+                  "
+                  src="/images/user_icon_1.png"
+                  alt=""
+                />
+              </div>
+              <div class="d-flex justify-content-start">
+                <img
+                  class="mt-1 me-2"
+                  style="
+                    height: 50px;
+                    width: 45px;
+                    border: 1px solid #535458;
+                    border-radius: 35px;
+                  "
+                  src="/images/profile2.webp"
+                  alt=""
+                />
+                <div>
+                  <div id="message_box" class="p-2">
+                    <h6>Marget Clayton</h6>
+                    <p>Hello!</p>
+                  </div>
+                  <p>10.00</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-start">
+                <img
+                  class="mt-1 me-2"
+                  style="
+                    height: 50px;
+                    width: 45px;
+                    border: 1px solid #535458;
+                    border-radius: 35px;
+                  "
+                  src="/images/profile2.webp"
+                  alt=""
+                />
+                <div>
+                  <div id="message_box" class="p-2">
+                    <h6>Marget Clayton</h6>
+                    <p>Hello!</p>
+                  </div>
+                  <p>10.00</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <div>
+                  <div id="message_box" class="p-2">
+                    <h6>Marget Clayton</h6>
+                    <p>Hello!</p>
+                  </div>
+                  <p>10.00</p>
+                </div>
+                <img
+                  class="mt-1 ms-2"
+                  style="
+                    height: 50px;
+                    width: 45px;
+                    border: 1px solid #535458;
+                    border-radius: 35px;
+                  "
+                  src="/images/user_icon_1.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              id="search"
+              style="border-top: 1px solid #c1c3cd"
+              class="ps-3 mt-3 mb-3 pt-3 align-items-center"
+            >
+              <input
+                class="p-2"
+                style="
+                  width: 85%;
+                  height: 45px;
+                  border-radius: 5px;
+                  border: 1px solid #c1c3cd;
+                "
+                type="text"
+                placeholder="Enter Message..."
+              />
+              <button
+                style="
+                  width: 12%;
+                  height: 45px;
+                  border-radius: 5px;
+                  border: 1px solid var(--message-box-color);
+                  background-color: var(--message-box-color);
+                  color: #fffbfb;
+                "
+                class=""
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer_container" class="text-center">footer</div>
+    </div>
+    <!-- ========= Scripts =========== -->
+    <script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    <script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+    <script src="/chef/chefViewOrders.js"></script>
+    <!-- <script src="/Admin/RViewOrder.Js"></script> -->
+  </body>
+</html>

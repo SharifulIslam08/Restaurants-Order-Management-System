@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- ===== Fontawesome CDN ======= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- ===== Stylesheet ====== -->
+    <link rel="stylesheet" href="/css/bootstrap-copy.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/homePage.css" />
+  </head>
+  <body>
+    <div id="body_container">
+      <!-- =========== HEADER ============= -->
+      <div class="d-flex justify-content-center bg-white" id="header_container">
+        <div class="navbar__toggle ms-3 me-4 mt-4" id="sidebar-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <!-- ========= LOGO ======== -->
+        <div class="logo d-flex">
+          <div class="logo_img">
+            <img src="/images/logo 1.jpg" class="rounded-3" alt="" />
+          </div>
+          <div class="logo_text mt-3 text-start">
+            <h2 class="logo_text-Delicious">DEMO</h2>
+            <span class="logo_text-restaurent fs-5">Restaurant</span>
+          </div>
+        </div>
+        <div class="add_to_cart-header_btn">
+          <span class="added_items-count">0</span>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+
+      <!-- =========== END OF HEADER ============= -->
+
+      <!-- =========== SIDE NAV ============= -->
+      <!-- outer box -->
+      <div class="sidebar-outbox"></div>
+      <div id="side_nav_container">
+        <div class="sidebar__heading">
+          <span id="sidebar-cross-btn"
+            ><i class="fa-regular fa-circle-xmark"></i
+          ></span>
+          <div class="sidebar_heading-logo">
+            <img src="/images/logo 3.jpg" alt="" />
+          </div>
+        </div>
+        <!-- sidebar menu items  -->
+        <div class="sidebar__menu-items">
+          <!--  end of static -->
+          <!-- <div class="sidebar_delimiter"></div> -->
+          <!-- menu item 1 -->
+          <!-- <div class="sidebar_menu-item">
+            <div class="menu_header">
+              <i class="sidebar_square-icon fa-regular fa-square-full"></i>
+              <h6>html Home</h6>
+            </div>
+            <div class="chevron-down-icon">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div> -->
+          <!-- <div class="sidebar_delimiter"></div> -->
+          <!-- menu item 1 -->
+          <!-- <div class="sidebar_menu-item">
+            <div class="d-flex">
+              <i class="sidebar_square-icon fa-regular fa-square-full"></i>
+              <h6>Dynamic Start</h6>
+            </div>
+            <div class="chevron-down-icon">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div> -->
+          <!--  end of static -->
+          <!-- <div class="sidebar_delimiter"></div> -->
+        </div>
+        <!-- sidebar footer -->
+        <div class="sidebar_footer text-center">
+          <h1>Visit Us</h1>
+          <p class="text-muted">
+            Restaurant St, Delicious City, London 9578, UK
+          </p>
+          <p>Open: 9.30 am - 2.30pm</p>
+          <i
+            class="fa-regular fa-square-full"
+            style="
+              color: var(--color-primary);
+              transform: rotate(45deg);
+              font-size: 14px;
+            "
+          ></i>
+          <h6 class="mt-2">CALL FOR DETAILS</h6>
+          <h5 style="color: var(--color-primary)">+88-12345-678910</h5>
+        </div>
+      </div>
+      <!-- =========== END OF Side NAV ============= -->
+
+      <!-- ================ CORE =================== -->
+      <div id="core_container" class="mt-3">
+        <div class="text-center fs-2">Delicious Menu List</div>
+        <div class="menu-tabs ">
+          <!-- <div class="p-1"> -->
+          <div class="delimiter-horizontal"></div>
+          <!-- menu headers -->
+          <div
+            class= "menu-tabs-header-items m-3 d-flex justify-content-between"
+          >
+            <!-- <div class="menu-tabs-header-text"><h5 id="hello">oij;jp</h5></div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text active" id="weekday_lunch">
+                <h5>WEEKDAY LUNCH</h5>
+              </div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text" id="dinner">
+                <h5>DINNER</h5>
+              </div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text"><h5>SNAKS</h5></div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text"><h5>DRINKS</h5></div> -->
+          </div>
+          <!-- END OF MENU HEADERS -->
+          <div class="delimiter-horizontal"></div>
+          <!-- </div> -->
+          <!--  weekday lunch dishes -->
+          <div class="" id="lunch-dishes">
+            <div class="menu-body">
+              <!-- menu left -->
+              <div class="menu-left">
+                <!-- dish block 1 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-5.82f62d04acb6111c989f.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>Greek Salad</h4>
+                          <!-- <div class="delimiter-double" style="width: 52%"></div> -->
+                          <span class="dish-price">$25.50</span>
+                        </div>
+                        <p class="text-muted">
+                          Tomatoes, green bell pepper, sliced cucumber onion,
+                          olives, and feta cheese.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn" id="customize">
+                      Custiomize
+                    </button>
+                    <div class="serve_count d-flex justify-content-between">
+                      <span class="count-minus" onclick="serveCountMinus()">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus" onclick="serveCountPlus()">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+                <!-- dish block 2 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-6.1e64cf3019cac040ec9f.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex justify-content-between">
+                          <div class="d-flex">
+                            <h4>Lasagne</h4>
+                            <span class="dish-tag">SEASONAL</span>
+                          </div>
+                          <!-- <div class="delimiter-double" style="width: 45%"></div> -->
+                          <span class="dish-price">$40.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Vegetables, cheeses, ground meats, tomato sauce,
+                          seasonings and spices
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+                <!-- dish block 3 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-7.6b0c1db809a2a1fe6b45.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>Butternut Pumpkin</h4>
+                          <!-- <div class="delimiter-double" style="width: 35%"></div> -->
+                          <span class="dish-price">$10.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Red onion, crab salad stuffed Pumpkin and red bell
+                          pepper and green bell pepper.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Menu Left -->
+              <div class="delimiter-vertical"></div>
+              <!-- menu right -->
+              <div class="menu-right">
+                <!-- dish block 4 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-8.248ea7ed7b0fe0e7b354.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>Olivas Rellenas</h4>
+                          <!-- <div class="delimiter-double" style="width: 55%"></div> -->
+                          <span class="dish-price">$25.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Avocados with crab meat, red onion, crab salad stuffed
+                          red bell pepper and green bell pepper.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+
+                <!-- dish block 5 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-9.2d536b53e3eaa8df3e3d.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>Opu Fish</h4>
+                          <!-- <div class="delimiter-double" style="width: 60%"></div> -->
+                          <span class="dish-price">$49.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Vegetables, cheeses, ground meats, tomato sauce,
+                          seasonings and spices
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+                <!-- dish block 6 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-10.cedb6922e903ab4051f1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex justify-content-between">
+                          <div class="d-flex">
+                            <h4>Tokusen Wagyu</h4>
+                            <span class="dish-tag">NEW</span>
+                          </div>
+                          <!-- <div class="delimiter-double" style="width: 5%"></div> -->
+                          <span class="dish-price">$30.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Vegetables, cheeses, ground meats, tomato sauce,
+                          seasonings and spices.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Menu Right -->
+            </div>
+          </div>
+          <!-- end of weekday lunch -->
+          <!-- DINNER dishes -->
+          <div class="" id="dinner-dishes">
+            <div class="menu-body">
+              <!-- menu left -->
+              <div class="menu-left">
+                <!-- dish block 1 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-5.82f62d04acb6111c989f.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>DINNER Greek Salad</h4>
+                          <!-- <div class="delimiter-double" style="width: 52%"></div> -->
+                          <span class="dish-price">$25.50</span>
+                        </div>
+                        <p class="text-muted">
+                          Tomatoes, green bell pepper, sliced cucumber onion,
+                          olives, and feta cheese.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn" id="customize">
+                      Custiomize
+                    </button>
+                    <div class="serve_count d-flex justify-content-between">
+                      <span class="count-minus" onclick="serveCountMinus()">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus" onclick="serveCountPlus()">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+                <!-- dish block 2 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-6.1e64cf3019cac040ec9f.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex justify-content-between">
+                          <div class="d-flex">
+                            <h4>Lasagne</h4>
+                            <span class="dish-tag">SEASONAL</span>
+                          </div>
+                          <!-- <div class="delimiter-double" style="width: 45%"></div> -->
+                          <span class="dish-price">$40.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Vegetables, cheeses, ground meats, tomato sauce,
+                          seasonings and spices
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+                <!-- dish block 3 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-7.6b0c1db809a2a1fe6b45.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>Butternut Pumpkin</h4>
+                          <!-- <div class="delimiter-double" style="width: 35%"></div> -->
+                          <span class="dish-price">$10.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Red onion, crab salad stuffed Pumpkin and red bell
+                          pepper and green bell pepper.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Menu Left -->
+              <div class="delimiter-vertical"></div>
+              <!-- menu right -->
+              <div class="menu-right">
+                <!-- dish block 4 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-8.248ea7ed7b0fe0e7b354.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>Olivas Rellenas</h4>
+                          <!-- <div class="delimiter-double" style="width: 55%"></div> -->
+                          <span class="dish-price">$25.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Avocados with crab meat, red onion, crab salad stuffed
+                          red bell pepper and green bell pepper.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+
+                <!-- dish block 5 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-9.2d536b53e3eaa8df3e3d.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex">
+                          <h4>Opu Fish</h4>
+                          <!-- <div class="delimiter-double" style="width: 60%"></div> -->
+                          <span class="dish-price">$49.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Vegetables, cheeses, ground meats, tomato sauce,
+                          seasonings and spices
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+                <!-- dish block 6 -->
+                <div class="dish_card">
+                  <div class="d-flex">
+                    <div class="dish-block d-flex" onclick="showDishDetails()">
+                      <div class="dish-img">
+                        <img
+                          src="/images/menu-image-10.cedb6922e903ab4051f1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="dish-body ms-3">
+                        <div class="dish-title d-flex justify-content-between">
+                          <div class="d-flex">
+                            <h4>Tokusen Wagyu</h4>
+                            <span class="dish-tag">NEW</span>
+                          </div>
+                          <!-- <div class="delimiter-double" style="width: 5%"></div> -->
+                          <span class="dish-price">$30.00</span>
+                        </div>
+                        <p class="text-muted">
+                          Vegetables, cheeses, ground meats, tomato sauce,
+                          seasonings and spices.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- add to cart -->
+                    <div class="add_to_cart-menu_btn" onclick="addToCart()">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                  </div>
+                  <!-- buttons -->
+                  <div class="dish-buttons d-flex justify-content-end">
+                    <button class="order_now dish-btn">Custiomize</button>
+                    <div class="serve_count d-flex justify-content-between bg-">
+                      <span class="count-minus">
+                        <i class="fa-solid fa-minus"></i>
+                      </span>
+                      <span class="count-number">0</span>
+                      <span class="count-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </span>
+                    </div>
+                    <button class="order_now dish-btn">ORDER NOW</button>
+                  </div>
+                </div>
+              </div>
+              <!-- End of Menu Right -->
+            </div>
+          </div>
+          <!-- end of DINNER -->
+          <!-- </div> -->
+
+          <!-- Dynamic Dish items -->
+          <div class= "p-3 mt-5 ">
+          <div class="delimiter-horizontal"></div>
+          <div class="text-center fs-2 p-3">Best Special Menu</div>
+          <div class="delimiter-horizontal"></div>
+          <div class="d-flex justify-content-center bg-">
+            <div class="special_dishes d-flex flex-wrap justify-content-between p-4 rounded-5 bg-white">
+            <!-- dish 1 -->
+            <div class="sp_dish-block">
+              <div class="sp_dish-img">
+                <img
+                  src="/images/menu-image-11.7be629d8a04827b964cc.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="sp_dish-body">
+                <div class="sp_dish-title">
+                  <h5>Greek Salad</h5>
+                  <span class="price">$39.00</span>
+                </div>
+                  <p class="sp_dish-details text-center">
+                    Avocados with crab meat, red onion, crab salad red bell
+                    pepper
+                  </p>
+              <!-- buttons -->
+              <div class="dish-buttons d-flex justify-content-around">
+                <button class="dish-btn" id="customize">
+                  Custiomize
+                </button>
+
+                <button class="order_now dish-btn">ORDER NOW</button>
+              </div>
+            </div>
+            </div>
+            <!-- end of dish 1 -->
+            <!-- dynamic -->
+          </div>
+          </div>
+        </div>
+        <!-- chefs selection -->
+        <div class="chefs_selection">
+          <div class="delimiter-horizontal"></div>
+          <div class="text-center fs-2 p-3">Best Special Menu</div>
+          <div class="delimiter-horizontal"></div>
+          <div class="d-flex justify-content-center ">
+          <div class="chefs_selection-dish-block d-flex w-75 justify-content-around">
+        <div class="chefs_sel-img">
+          <img src="/images/chefs_selection.PNG" alt="" style="border-radius: 35px; width: 600px;">
+        </div>
+        <div>
+          <div class="text-center w-75"><h5 style="color: var(--color-primary
+          );">CHEF SELECTION</h5>
+          <h2>Lobster Tortellini</h2>
+          <h6 class="">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since.</h6>
+          </div>
+          <h6>$40.00 $20.00</h6>
+        </div>
+        </div>
+      </div>
+      <!-- ======================== Theme Customization =================== -->
+
+      <div class="customize-order">
+        <div class="order-card">
+          <h2>Customixe your Order</h2>
+          <p>Manage your order as you wish.</p>
+        </div>
+      </div>
+      <!-- ------------------ End of theme ---------- -->
+      <!-- ================ END OF CORE =================== -->
+      <div id="footer_container" class="text-center">footer</div>
+    </div>
+    <!-- Private event -->
+    
+    <!-- ========= Scripts =========== -->
+    <script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/homePage.js"></script>
+    <!-- <script src="/js/debug.js"></script> -->
+  </body>
+</html>

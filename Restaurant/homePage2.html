@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.0 Home Page</title>
+    <!-- ===== Fontawesome CDN ======= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- ===== Stylesheet ====== -->
+    <link rel="stylesheet" href="/css/bootstrap-copy.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/homePage.css" />
+  </head>
+  <body>
+    <div id="body_container">
+      <!-- =========== HEADER ============= -->
+      <div class="d-flex justify-content-center bg-white" id="header_container">
+        <div class="navbar__toggle ms-3 me-4 mt-4" id="sidebar-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <!-- ========= LOGO ======== -->
+        <div class="logo d-flex">
+          <div class="logo_img">
+            <img src="/images/logo 1.jpg" class="rounded-3" alt="" />
+          </div>
+          <div class="logo_text mt-3 text-start">
+            <h2 class="logo_text-Delicious">DEMO</h2>
+            <span class="logo_text-restaurent fs-5">Restaurant</span>
+          </div>
+        </div>
+        <div class="show_order-header_btn" id="show_order">
+          <i class="fa-solid fa-bowl-rice"></i>
+        </div>
+      
+        <div id="orders_container">
+          <div class="cart_header p-2 text-center" style="background: var(--color-light);">
+            <h3>Track Order</h3>
+        </div>
+      <div class="sidebar_delimiter"></div>
+      <div class="ordered_items">
+        <img class="empty_order_img" src="/images/emptyCart.4e943399.png" alt="">
+
+         <!--  <div class="d-flex justify-content-between ps-2 pe-2 p-1">
+            <div class="order-info">
+              <div class="order-date fw-bold">Wed,12Sep</div>
+            <span class="fw-bold">Order ID:</span>  <span class="order-id"> #12345</span>
+            </div>
+            <div class="fw-bold">Cost: <span class="price">$141</span></div>
+          </div>
+        <div class="sidebar_delimiter"></div> -->
+          <!-- <div class="d-flex m-1 p-1">
+            <h6 class="mt-1"> ETA: <span class="arrival-time">20 Min</span></h6>
+            <div class="hour-glass ms-2 mb-1 pb-2 "style="width=20px;">
+              <i class="fa-regular fa-hourglass-half"></i>
+            </div>
+          </div>
+          <div class="order_tracking-body p-1"> -->
+            <!--  -->
+            <!-- <div class="status  active" id="order_placed">
+              <div class="status-content">
+                <div class="status-line active"></div>
+                <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="status-body">
+                  <h6>Order Placed</h6>
+                  <p class="">Your order is being placed.</p>
+                </div>
+                <span class="status-time">8:20</span>
+              </div>
+            </div> -->
+            <!--  -->
+            <!--  -->
+            <!-- <div class="status  active" id="order_recived">
+              <div class="status-content">
+                <div class="status-line"></div>
+              <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="status-body">
+                <h6>Order Recieved</h6>
+                <p class=""> Your order got confirmed.</p>
+                
+              </div><span class="time">8:20</span>
+            </div>
+            </div> -->
+            <!--  -->
+            <!--  -->
+            <!-- <div class="status" id="preparing">
+              <div class="status-content">
+                <div class="status-line"></div>
+              <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="status-body">
+                <h6>Preparing</h6>
+                <p class="">We started preparing your dish.</p>
+                
+              </div><span class="time">8:20</span>
+            </div>
+            </div> -->
+            <!--  -->
+            <!--  -->
+            <!-- <div class="status" id="cooking">
+              <div class="status-content">
+                <div class="status-line"></div>
+              <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="status-body">
+                <h6>Cooking</h6>
+                <p class="">We hav strted cooking your food.</p>
+                
+              </div><span class="time">8:20</span>
+            </div>
+            </div> -->
+            <!--  -->
+            <!--  -->
+            <!-- <div class="status" id="ready">
+              <div class="status-content">
+                <div class="status-line"></div>
+              <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="status-body">
+                <h6>It's Ready</h6>
+                <p class="bold-text">Our executive strted to deliver your food.</p>
+                
+              </div><span class="time">8:20</span>
+            </div>
+            </div> -->
+            <!--  -->
+            <!--  -->
+            <!-- <div class="status" id="delivered">
+              <div class="status-content ms-1"> -->
+              <!-- <div class="status-line"></div> -->
+<!-- 
+              <div class="status-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <div class="status-body">
+                <h6>Delivered</h6>
+                <p class="bold-text">Enjoy your meal and have a great day. Don't forget to rate us.</p>
+              </div><span class="time">8:20</span>
+            </div>
+            </div> -->
+            <!--  -->
+
+          <!-- </div>-->
+        </div> 
+        <!-- end of ordered items -->
+      </div>
+        <div class="add_to_cart-header_btn" id="nav_cart">
+          <span class="added_items-count">0</span>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <!-- add to cart -->
+        <!-- <div class="cart-outbox"></div> -->
+        <div id="cart_container">
+              <div class="cart_header p-2 text-center" style="background: var(--color-light);">
+                <h3>ADDED ITEMS</h3>
+              </div>
+            <div class="sidebar_delimiter"></div>
+            <div class="cart_items">
+              <img class="empty_order_img" src="/images/emptyCart.4e943399.png" alt="">
+              <!-- <img class="empty_order_img" src="/images/emptyCart.4e943399.png" alt=""> -->
+             <!-- <h5 class="text-center mt-5" style="color:red">You have not added any dish to cart yet!</h5> -->
+            <!-- <div class="cart_item">
+              <div class="cart_dish_card">
+                <div class="cart_header">
+                    <img class="cart_dish-img"
+                    src="/images/menu-image-6.1e64cf3019cac040ec9f.png"
+                    alt=""
+                    /></div>
+                  <div class="cart_dish-body">
+                       <h6>Opu Fish</h6>
+                     <div class="item_quantity"> Q:<span class="quantity ms-2">1</span></div>
+                      <div class="dish-price">$15.00</div>
+                  </div>
+                
+                <div class="delete_icon mt-3 me-3 fs-5"><i class="fa-regular fa-trash-can float-end"></i></div>
+              </div>
+   
+            <div class="sidebar_delimiter"></div>
+          </div>
+             <div class="cart-footer">  <div class="text-end me-3 fs-5 fw-bold">
+              Subtotal:
+              <span class="ms-3" style="color: var(--color-primary);">$96</span>
+            </div>
+              <button class="dish-btn float-end w-75">ORDER</button> -->
+
+          </div>
+            </div>
+        </div>
+      
+
+      <!-- =========== END OF HEADER ============= -->
+
+      <!-- =========== SIDE NAV ============= -->
+      <!-- outer box -->
+      <div class="sidebar-outbox"></div>
+      <div id="side_nav_container">
+        <div class="sidebar__heading">
+          <span id="sidebar-cross-btn"
+            ><i class="fa-regular fa-circle-xmark"></i
+          ></span>
+          <div class="sidebar_heading-logo">
+            <img src="/images/logo 3.jpg" alt="" />
+          </div>
+        </div>
+        <!-- sidebar menu items  -->
+        <div class="sidebar__menu-items">
+          <!--  end of static -->
+          <!-- <div class="sidebar_delimiter"></div> -->
+          <!-- menu item 1 -->
+          <!-- <div class="sidebar_menu-item">
+            <div class="menu_header">
+              <i class="sidebar_square-icon fa-regular fa-square-full"></i>
+              <h6>html Home</h6>
+            </div>
+            <div class="chevron-down-icon">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div> -->
+          <!-- <div class="sidebar_delimiter"></div> -->
+          <!-- menu item 1 -->
+          <!-- <div class="sidebar_menu-item">
+            <div class="d-flex">
+              <i class="sidebar_square-icon fa-regular fa-square-full"></i>
+              <h6>Dynamic Start</h6>
+            </div>
+            <div class="chevron-down-icon">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div> -->
+          <!--  end of static -->
+          <!-- <div class="sidebar_delimiter"></div> -->
+        </div>
+        <!-- sidebar footer -->
+        <div class="sidebar_footer text-center">
+          <h1>Visit Us</h1>
+          <p class="text-muted">
+            Restaurant St, Delicious City, London 9578, UK
+          </p>
+          <p>Open: 9.30 am - 2.30pm</p>
+          <i
+            class="fa-regular fa-square-full"
+            style="
+              color: var(--color-primary);
+              transform: rotate(45deg);
+              font-size: 14px;
+            "
+          ></i>
+          <h6 class="mt-2">CALL FOR DETAILS</h6>
+          <h5 style="color: var(--color-primary)">+88-12345-678910</h5>
+        </div>
+      </div>
+      <!-- =========== END OF Side NAV ============= -->
+
+      <!-- ================ CORE =================== -->
+      <div id="core_container" class="mt-3">
+        <div class="text-center fs-2">Delicious Menu  List</div>
+        <div class="menu-tabs ">
+          <!-- <div class="p-1"> -->
+          <div class="delimiter-horizontal"></div>
+          <!-- menu headers -->
+          <div
+            class= "menu-tabs-header-items m-3"
+          >
+            <!-- <div class="menu-tabs-header-text"><h5 id="hello">oij;jp</h5></div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text active" id="weekday_lunch">
+                <h5>WEEKDAY LUNCH</h5>
+              </div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text" id="dinner">
+                <h5>DINNER</h5>
+              </div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text"><h5>SNAKS</h5></div>
+              <div style="height: 10px">
+                <i class="menu-tabs-header-icon fa-regular fa-square-full"></i>
+              </div>
+              <div class="menu-tabs-header-text"><h5>DRINKS</h5></div> -->
+          </div>
+          <!-- END OF MENU HEADERS -->
+          <div class="delimiter-horizontal"></div>
+
+
+          <!-- Dynamic Dish items -->
+          <div class= "p-3 mt-5 ms-5 me-2">
+          <!-- <div class="delimiter-horizontal"></div>
+          <div class="text-center fs-2 p-3">Best Special Menu</div>
+          <div class="delimiter-horizontal"></div> -->
+          <div class="d-flex justify-content-center ">
+            <div class="special_dishes d-flex flex-wrap  rounded-5">
+            <!-- dish 1 -->
+            <!-- <div class="sp_dish-block">
+              <div class="sp_dish-img">
+                <img
+                  src="/images/menu-image-18.d58abb49bf3d4d408d1b.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="sp_dish-body">
+                <div class="sp_dish-title">
+                  <h5>Greek Salad </h5>
+                  <span class="price">$39.00</span> -->
+                  <!-- add to cart -->
+          <!-- <div class="add_to_cart-menu_btn" onclick="addToCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+                </div>
+                  <p class="sp_dish-details text-center">
+                    Avocados with crab meat, red onion, crab salad red bell
+                    pepper
+                  </p> -->
+              <!-- buttons -->
+              <!-- <div class="dish-buttons d-flex justify-content-around">
+                <button class="dish-btn" id="customize">
+                  Custiomize
+                </button> -->
+                <!-- quantity -->
+                <!-- <div class="serve_count d-flex justify-content-between">
+                  <span class="count-minus" onclick="serveCountMinus()">
+                    <i class="fa-solid fa-minus"></i>
+                  </span>
+                  <span class="count-number">0</span>
+                  <span class="count-plus" onclick="serveCountPlus()">
+                    <i class="fa-solid fa-plus"></i>
+                  </span>
+                </div> -->
+                <!-- end of quantity -->
+                <!-- <button class="order_now dish-btn">ORDER NOW</button>
+              </div>
+            </div>
+            </div> -->
+            <!-- end of dish 1 -->
+            <!-- dynamic -->
+          
+          
+          </div>
+          <!-- end of sp -->
+          </div>
+        </div>
+              <!-- static Menu Lists -->
+              <!-- <div class="delimiter-horizontal"></div>
+          <div class="text-center fs-2 p-3">Best Special Menu</div>
+          <div class="delimiter-horizontal"></div> -->
+          <div class="d-flex justify-content-center bg- mt-5 mb-5 ">
+<!--  weekday lunch dishes -->
+<!-- get it back here -->
+<!-- end of DINNER -->
+
+          </div>
+          <!-- end of ststic  -->
+         
+          <!-- chefs selection -->
+          <div class="d-flex justify-content-center">
+          <div class="chefs_selection-dish-block">
+        <div class="chefs_sel-img">
+          <img src="/images/chefs_selection.PNG" alt="" style="border-radius: 35px; width: 500px;">
+        </div>
+        <div class="chefs_card-body">
+          <div class="w-75">
+            <div><h5 class="ms-3" style="color: var(--color-primary
+            );">CHEF SELECTION</h5>
+            <!-- highlight -->
+            <div class="d-flex">
+              <div style="height: 10px">
+                <i class="fa-regular fa-square-full" style="color:var(--color-primary);transform: rotate(45deg);"></i>
+              </div>
+            <div class="" style="background: var(--color-primary); height: 1px; width: 150px; margin: 10px 5px;"> </div>
+            <div style="height: 10px">
+              <i class="fa-regular fa-square-full" style="color:var(--color-primary);transform: rotate(45deg);"></i>
+            </div></div></div>
+          <h2>Lobster Tortellini</h2>
+          <h6 class="">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since.</h6>
+          </div>
+          <div class="d-flex" style="color: var(--color-primary);"><h6 class="mt-1 text-muted text-decoration-line-through">$40.00</h6> <h5 class="ms-3">$30.00</h5></div>
+        </div>
+        </div>
+      </div>
+      <!-- Private event -->
+      <div class="d-flex justify-content-center">
+        <div class="chefs_selection-dish-block">
+      
+      <div class="chefs_card-body">
+        <div class="w-75">
+          <div><h5 class="ms-3" style="color: var(--color-primary
+          );">Banquet Hall</h5>
+          <!-- highlight -->
+          <div class="d-flex">
+            <div style="height: 10px">
+              <i class="fa-regular fa-square-full" style="color:var(--color-primary);transform: rotate(45deg);"></i>
+            </div>
+          <div class="" style="background: var(--color-primary); height: 1px; width: 150px; margin: 10px 5px;"> </div>
+          <div style="height: 10px">
+            <i class="fa-regular fa-square-full" style="color:var(--color-primary);transform: rotate(45deg);"></i>
+          </div></div></div>
+          <!-- banquet hall -->
+        
+        <h6 class="">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since.</h6>
+        </div>
+        <div class="d-flex" style="color: var(--color-primary);"><h6 class="mt-1 text-muted text-decoration-line-through">$40.00</h6> <h5 class="ms-3">$30.00</h5></div>
+      </div>
+      <div class="chefs_sel-img">
+        <img src="/images/featured-10.744c4a448820825467bd.jpg" alt="" style="border-radius: 35px; width: 500px; height: 400px;">
+      </div>
+      </div>
+    </div>
+    <!-- ihodsfj -->
+    <div class="d-flex justify-content-center">
+      <div class="chefs_selection-dish-block">
+        <div class="chefs_sel-img">
+          <img src="/images/featured-11.e1e9ceab513176a77bcc.jpg" alt="" style="border-radius: 35px; width: 500px; height: 400px;">
+        </div>
+    <div class="chefs_card-body">
+      <div class="w-75">
+        <div><h5 class="ms-3" style="color: var(--color-primary
+        );">Banquet Hall</h5>
+        <!-- highlight -->
+        <div class="d-flex">
+          <div style="height: 10px">
+            <i class="fa-regular fa-square-full" style="color:var(--color-primary);transform: rotate(45deg);"></i>
+          </div>
+        <div class="" style="background: var(--color-primary); height: 1px; width: 150px; margin: 10px 5px;"> </div>
+        <div style="height: 10px">
+          <i class="fa-regular fa-square-full" style="color:var(--color-primary);transform: rotate(45deg);"></i>
+        </div></div></div>
+        <!-- banquet hall -->
+      
+      <h6 class="">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since.</h6>
+      </div>
+      <div class="d-flex" style="color: var(--color-primary);"><h6 class="mt-1 text-muted text-decoration-line-through">$40.00</h6> <h5 class="ms-3">$30.00</h5></div>
+    </div>
+    
+    </div>
+  </div>
+      <!-- ======================== Order Customization =================== -->
+
+      <div class="customize-order">
+        <div class="order-card">
+
+          <!-- <h4>Customixe your Order</h4> -->
+          <!-- <p>Manage your order as you wish.</p> -->
+          <h5>ADDONS</h5>
+          <div class="addon_list d-flex justify-content-center">
+            <!-- <div class="addons_for0">
+              <div class="addon">
+                <input type="checkbox" value="Banana" data-price="1"> 
+               <span class="addon_title">Banana</span>
+               <span class="price ms-3">$1</span>
+              </div>
+             <div class="addon"><input type="checkbox" id="addon0" value="Apple" data-price="5">
+               <span class="addon_title">Apple</span><span class="price ms-3">$5</span></div>
+               </div>
+          </div> -->
+          
+        </div>
+         <!-- <button class=" dish-btn" id="addon_add-btn" onclick="addAddons()">ADD</button> -->
+
+      </div>
+    </div>
+      <!-- =========== order confirmation ========= -->
+      <div class="confirm-order-outerbox">
+        <div class="order-confirm">
+          <h4>Thanks for being with Us!</h4>
+          <p>Your order will be served withing <span style="color:var(--color-primary);font-size: 16px;font-weight: 500;">30 minutes</span>.</p>
+          <button class="btn btn-outline-success w-50" id="order_ok-btn">OK</button>
+        </div>
+      </div>
+      <!-- ------------------ End of theme ---------- -->
+      <!-- ================ END OF CORE =================== -->
+      <div id="footer_container" class="text-center">footer</div>
+    </div>
+  </div>
+    
+    <!-- ========= Scripts =========== -->
+    <script src="/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/homePage.js"></script>
+    <!-- <script src="/js/debug.js"></script> -->
+  </body>
+</html>
